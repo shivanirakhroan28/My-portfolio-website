@@ -1,84 +1,81 @@
-
 import streamlit as st
 import base64
 
-# Set up the page
+# Set up the page configuration
 st.set_page_config(page_title="Shivani's Data Scientist Portfolio", layout="wide")
 
 # Apply CSS for custom styling
 st.markdown("""
     <style>
     body {
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-            
-        }
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
 
-        /* Optional: Set a max-width to prevent content from stretching too far */
-        .main {
-            max-width: 100vw;
-            overflow: hidden;
-        }
-        body {
-           background: #e3f2fd; /* Light blue background */ 
-            color: #333;
-            font-family: Arial, sans-serif;
-        }
-        .profile-pic {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid #4CAF50; /* Green border */
-            margin: 10px auto;
-        }
-        .green-header {
-            color: #4CAF50; /* Green color for name */
-            font-size: 3rem;
-            text-align: left;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-        .sub-header {
-            text-align: left;
-            font-size: 1.5rem;
-            color: black;
-             font-weight: bold;
-        }
-        .intro-text {
-            font-size: 1rem;
-            color: #333;
-            margin-top: 1rem;
-            text-align: justify;
-        }
-          .profile-pic {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 6px solid #4CAF50; /* Green border */
-            object-fit: cover;
-            margin: 0 auto; /* Center alignment */
-            display: block; /* For centering in the column */
-        }
-        .sidebar .sidebar-content {
-            font-weight: bold;
-            font-size: 24px;  /* Adjust font size */
-            color: brown;
-        }
-        .sidebar .sidebar-header {
-            font-size: 24px;
-            font-weight: bold;
-            color: brown;
-        }
+    /* Optional: Set a max-width to prevent content from stretching too far */
+    .main {
+        max-width: 100vw;
+        overflow: hidden;
+    }
+
+    body {
+        background: #e3f2fd; /* Light blue background */
+        color: #333;
+        font-family: Arial, sans-serif;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 6px solid #4CAF50; /* Green border */
+        margin: 10px auto;
+    }
+
+    .green-header {
+        color: #4CAF50; /* Green color for name */
+        font-size: 3rem;
+        text-align: left;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    .sub-header {
+        text-align: left;
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+        color: #333;
+        margin-top: 1rem;
+        text-align: justify;
+    }
+
+    .sidebar .sidebar-content {
+        font-weight: bold;
+        font-size: 24px;  /* Adjust font size */
+        color: brown;
+    }
+
+    .sidebar .sidebar-header {
+        font-size: 24px;
+        font-weight: bold;
+        color: brown;
+    }
     </style>
 """, unsafe_allow_html=True)
 
+# Layout: Two columns
 col1, col2 = st.columns([1, 3])
 
 with col1:
     # Reading the image and encoding it in Base64
-    image_path = r"C:\Users\shivani\PycharmProjects\PythonProject\Portfolio_website\profile.jpeg"
+    image_path = "profile.jpeg"  # Make sure the path is correct relative to the app.py location
     try:
         with open(image_path, "rb") as img_file:
             encoded_image = base64.b64encode(img_file.read()).decode()
@@ -89,7 +86,8 @@ with col1:
 
 with col2:
     st.markdown('<div class="green-header">SHIVANI</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">Data Scientist | Machine Learning Enthusiast | Problem Solver</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Data Scientist | Machine Learning Enthusiast | Problem Solver</div>',
+                unsafe_allow_html=True)
     st.markdown("""
     <div class="intro-text">
     Hello! I'm a passionate Data Scientist with expertise in building machine learning models, analyzing data trends, 
@@ -119,7 +117,7 @@ if menu == "About":
     """, unsafe_allow_html=True)
 elif menu == "Skills":
     st.markdown('<h2 style="color:black; text-decoration: underline;">Skills</h2>', unsafe_allow_html=True)
- # Apply brown color to the header
+    # Apply brown color to the header
     st.markdown("""
     - **Programming Languages:** Python, HTML, CSS, SQL
     - **Machine Learning:** Numpy, Pandas, Supervised & Unsupervised Learning, NLP, Decision Trees, Random Forests, KNN, SVM
@@ -169,7 +167,6 @@ st.markdown("""
 [![LinkedIn](https://img.icons8.com/ios-filled/50/000000/linkedin.png)](https://www.linkedin.com/in/shivani-rakhroan) 
 [![GitHub](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/shivanirakhroan28) 
 [![Email](https://img.icons8.com/ios-filled/50/000000/email-sign.png)](mailto:rakhroanshivu@gmail.com)
-
 """, unsafe_allow_html=True)
 
 st.markdown("""
