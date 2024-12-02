@@ -45,7 +45,7 @@ st.markdown("""
     .sub-header {
         text-align: left;
         font-size: 1.5rem;
-        color: black;
+        color: #EF4B4B;
         font-weight: bold;
     }
 
@@ -54,6 +54,8 @@ st.markdown("""
         color: #333;
         margin-top: 1rem;
         text-align: justify;
+        color: #C5705D;
+        font-weight: bold;
     }
 
     .sidebar .sidebar-content {
@@ -108,7 +110,7 @@ if menu == "About":
     st.markdown('<h2 style="color:black; text-decoration: underline;">About</h2>', unsafe_allow_html=True)
 
     st.markdown("""
-        <h3 style="color:darkblue;">Certifications:</h3>
+        <h3 style="color:#E07B39;">Certifications:</h3>
         <ul style="color:black;">
             <li>Data Science / AI</li>
             <li>Java J2EE</li>
@@ -164,9 +166,9 @@ elif menu == "Contact":
 st.markdown("---")
 st.markdown("""
 ### Connect with me:
-[![LinkedIn](https://img.icons8.com/ios-filled/50/000000/linkedin.png)](https://www.linkedin.com/in/shivani-rakhroan) 
-[![GitHub](https://img.icons8.com/ios-filled/50/000000/github.png)](https://github.com/shivanirakhroan28) 
-[![Email](https://img.icons8.com/ios-filled/50/000000/email-sign.png)](mailto:rakhroanshivu@gmail.com)
+[![LinkedIn](https://img.icons8.com/ios-filled/50/99ccff/linkedin.png)](https://www.linkedin.com/in/shivani-rakhroan) 
+[![GitHub](https://img.icons8.com/ios-filled/50/99ccff/github.png)](https://github.com/shivanirakhroan28) 
+[![Email](https://img.icons8.com/ios-filled/50/99ccff/email-sign.png)](mailto:rakhroanshivu@gmail.com)
 """, unsafe_allow_html=True)
 
 st.markdown("""
