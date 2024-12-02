@@ -7,33 +7,34 @@ st.set_page_config(page_title="Shivani's Data Scientist Portfolio", layout="wide
 # Apply CSS for custom styling
 st.markdown("""
     <style>
+    /* Set the background color for the entire page */
     body {
         overflow-x: hidden;
         margin: 0;
         padding: 0;
-        background-color: #f0f0f0;
+        background-color: #e3f2fd !important; /* Light blue background */
     }
 
-    /* Set the background color for the entire page */
-    .main {
-        max-width: 100vw;
-        overflow: hidden;
-        background: #e3f2fd; /* Light blue background for both columns */
+    /* Set background for content and sidebar */
+    .stApp {
+        background-color: #FFF7D1;  /*#F6EFBD;*/
+        color: black; /* Ensures text is visible on black background */
     }
+
 
     body {
-        background: #e3f2fd; /* Light blue background */
-        color: #333;
+        background: #e3f2fd !important; /* Light blue background */
+        color:   red;     /*#333;*/
         font-family: Arial, sans-serif;
     }
 
     .profile-pic {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
         object-fit: cover;
-        border: 6px solid #4CAF50; /* Green border */
-        margin: 10px auto;
+        border: 3px solid #4CAF50; /* Green border */
+        margin: 4px auto;
     }
 
     .green-header {
@@ -47,7 +48,7 @@ st.markdown("""
     .sub-header {
         text-align: left;
         font-size: 1.5rem;
-        color: #EF4B4B;
+        color: black;     /* #EF4B4B;  */
         font-weight: bold;
     }
 
@@ -56,17 +57,8 @@ st.markdown("""
         color: #333;
         margin-top: 1rem;
         text-align: justify;
-        color: #C5705D;
-        font-weight: bold;
-    }
-
-    /* Set background for content and sidebar */
-    .col1 {
-        background-color: #e3f2fd; /* Light blue background for sidebar */
-    }
-
-    .col2 {
-        background-color: #e3f2fd; /* Light blue background for the main content */
+        color: black;
+        
     }
 
     /* Styling for the sidebar */
@@ -118,10 +110,10 @@ menu = st.sidebar.selectbox(
 )
 
 if menu == "About":
-    st.markdown('<h2 style="color:black; text-decoration: underline;">About</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 style="color:brown; text-decoration: underline;">About</h2>', unsafe_allow_html=True)
 
     st.markdown(""" 
-        <h3 style="color:#E07B39;">Certifications:</h3>
+        <h3 style="color:darkblue;">Certifications:</h3>
         <ul style="color:black;">
             <li>Data Science / AI</li>
             <li>Java J2EE</li>
@@ -129,7 +121,7 @@ if menu == "About":
         </ul>
     """, unsafe_allow_html=True)
 elif menu == "Skills":
-    st.markdown('<h2 style="color:black; text-decoration: underline;">Skills</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 style="color:brown; text-decoration: underline;">Skills</h2>', unsafe_allow_html=True)
     st.markdown("""
     - **Programming Languages:** Python, HTML, CSS, SQL
     - **Machine Learning:** Numpy, Pandas, Supervised & Unsupervised Learning, NLP, Decision Trees, Random Forests, KNN, SVM
@@ -139,7 +131,7 @@ elif menu == "Skills":
     """)
 
 elif menu == "Projects":
-    st.markdown('<h2 style="color:black; text-decoration: underline;">Projects</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 style="color:brown; text-decoration: underline;">Projects</h2>', unsafe_allow_html=True)
 
     st.markdown("""
     - **[Intelligent Spam-Ham Detector System](https://intelligent-spam-ham-detector-sytstem-3hgxbhzjpewfjcjd2thddk.streamlit.app/):**  
@@ -163,7 +155,7 @@ elif menu == "Projects":
     """)
 
 elif menu == "Contact":
-    st.markdown('<h2 style="color:black; text-decoration: underline;">Contact</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 style="color:brown;text-decoration: underline;">Contact</h2>', unsafe_allow_html=True)
 
     st.markdown("""
     - **Email:** [rakhroanshivu@gmail.com](mailto:rakhroanshivu@gmail.com)
@@ -171,14 +163,24 @@ elif menu == "Contact":
     - **GitHub:** [github.com/shivanirakhroan28](https://github.com/shivanirakhroan28)
     - **Phone:** +91 9654944681
     """)
+
 # Footer Section with Social Media Icons
 st.markdown("---")
-st.markdown("""
-### Connect with me:
-[![LinkedIn](https://img.icons8.com/ios-filled/50/99ccff/linkedin.png)](https://www.linkedin.com/in/shivani-rakhroan) 
-[![GitHub](https://img.icons8.com/ios-filled/50/99ccff/github.png)](https://github.com/shivanirakhroan28) 
-[![Email](https://img.icons8.com/ios-filled/50/99ccff/email-sign.png)](mailto:rakhroanshivu@gmail.com)
-""", unsafe_allow_html=True)
+st.markdown(
+    """
+    ### Connect with me:
+    <a href="https://www.linkedin.com/in/shivani-rakhroan" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn" style="margin-right: 10px;">
+    </a>
+    <a href="https://github.com/shivanirakhroan28" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="margin-right: 10px;">
+    </a>
+    <a href="mailto:rakhroanshivu@gmail.com" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/email-sign.png" alt="Email">
+    </a>
+    """,
+    unsafe_allow_html=True,
+)
 
 st.markdown("""
     <div style="background-color: black; color: white; padding: 10px; text-align: center;">
