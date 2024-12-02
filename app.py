@@ -11,12 +11,14 @@ st.markdown("""
         overflow-x: hidden;
         margin: 0;
         padding: 0;
+        background-color: #f0f0f0;
     }
 
-    /* Optional: Set a max-width to prevent content from stretching too far */
+    /* Set the background color for the entire page */
     .main {
         max-width: 100vw;
         overflow: hidden;
+        background: #e3f2fd; /* Light blue background for both columns */
     }
 
     body {
@@ -58,9 +60,19 @@ st.markdown("""
         font-weight: bold;
     }
 
+    /* Set background for content and sidebar */
+    .col1 {
+        background-color: #e3f2fd; /* Light blue background for sidebar */
+    }
+
+    .col2 {
+        background-color: #e3f2fd; /* Light blue background for the main content */
+    }
+
+    /* Styling for the sidebar */
     .sidebar .sidebar-content {
         font-weight: bold;
-        font-size: 24px;  /* Adjust font size */
+        font-size: 24px;
         color: brown;
     }
 
@@ -88,8 +100,7 @@ with col1:
 
 with col2:
     st.markdown('<div class="green-header">SHIVANI</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">Data Scientist | Machine Learning Enthusiast | Problem Solver</div>',
-                unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Data Scientist | Machine Learning Enthusiast | Problem Solver</div>', unsafe_allow_html=True)
     st.markdown("""
     <div class="intro-text">
     Hello! I'm a passionate Data Scientist with expertise in building machine learning models, analyzing data trends, 
@@ -109,7 +120,7 @@ menu = st.sidebar.selectbox(
 if menu == "About":
     st.markdown('<h2 style="color:black; text-decoration: underline;">About</h2>', unsafe_allow_html=True)
 
-    st.markdown("""
+    st.markdown(""" 
         <h3 style="color:#E07B39;">Certifications:</h3>
         <ul style="color:black;">
             <li>Data Science / AI</li>
@@ -119,13 +130,12 @@ if menu == "About":
     """, unsafe_allow_html=True)
 elif menu == "Skills":
     st.markdown('<h2 style="color:black; text-decoration: underline;">Skills</h2>', unsafe_allow_html=True)
-    # Apply brown color to the header
     st.markdown("""
     - **Programming Languages:** Python, HTML, CSS, SQL
     - **Machine Learning:** Numpy, Pandas, Supervised & Unsupervised Learning, NLP, Decision Trees, Random Forests, KNN, SVM
     - **Data Visualization:** Tableau, Matplotlib, Seaborn
     - **Data Science & Technologies:** Deep Learning, Statistical Analysis, Predictive Modeling, Data Structures & Algorithms, Image Processing, Data Mining, Neural Networks, Database Management, Pycharm, Jupyter Notebooks
-    - **Tools & Libraries:** Scikit-learn, TensorFlow, Keras, OpenCV, Git,  GitHub, SQL databases (MySQL, PostgreSQL)
+    - **Tools & Libraries:** Scikit-learn, TensorFlow, Keras, OpenCV, Git, GitHub, SQL databases (MySQL, PostgreSQL)
     """)
 
 elif menu == "Projects":
@@ -161,7 +171,6 @@ elif menu == "Contact":
     - **GitHub:** [github.com/shivanirakhroan28](https://github.com/shivanirakhroan28)
     - **Phone:** +91 9654944681
     """)
-
 # Footer Section with Social Media Icons
 st.markdown("---")
 st.markdown("""
